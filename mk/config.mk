@@ -1063,3 +1063,7 @@ CFG_HMAC_64_1024_RANGE ?= n
 # By default use standard pbkdf2 implementation
 CFG_CRYPTO_HW_PBKDF2 ?= n
 $(eval $(call cfg-depends-all,CFG_CRYPTO_HW_PBKDF2,CFG_CRYPTO_PBKDF2))
+
+# Disable the widevine PTA by default
+CFG_WIDEVINE_PTA ?= n
+CFG_WIDEVINE_HUK ?= $(CFG_WIDEVINE_PTA)
